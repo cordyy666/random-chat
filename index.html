@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Random Chat</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0b1020">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Random Chat">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon-192.png">
+<style>
+  :root{ --bg:#0b1020; --card:#141b33; --accent:#2f6bff; --accent2:#00d4ff; }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{height:100%}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:radial-gradient(1200px 600px at 50% -10%,#1b2a55,#0b1020 60%);color:#eef2ff;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:24px env(safe-area-inset-right) calc(24px + env(safe-area-inset-bottom)) env(safe-area-inset-left);text-align:center}
+  .logo{width:96px;height:96px;border-radius:24px;margin-bottom:18px;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;
+    box-shadow:0 12px 40px rgba(47,107,255,.35)}
+  .logo svg{width:52px;height:52px}
+  h1{font-size:26px;margin:0 0 6px}
+  p{color:#aab4d4;margin:0 0 28px;max-width:320px;line-height:1.5}
+  .btn{appearance:none;border:0;cursor:pointer;font-size:19px;font-weight:600;color:#fff;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));padding:18px 34px;border-radius:16px;
+    box-shadow:0 10px 30px rgba(47,107,255,.4);transition:transform .08s ease}
+  .btn:active{transform:scale(.97)}
+  .hint{margin-top:26px;font-size:13px;color:#8290b8;max-width:300px;line-height:1.5}
+  a{color:var(--accent2);text-decoration:none}
+  .tip{margin-top:14px;font-size:12px;color:#6b78a0}
+</style>
+</head>
+<body>
+  <div class="logo" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+    </svg>
+  </div>
+  <h1>Random Chat</h1>
+  <p>Meet new people over live video. Tap below to start a chat on Ome.TV.</p>
+  <button class="btn" id="go">Start Video Chat</button>
+  <div class="hint">Your browser will ask for <b>camera &amp; microphone</b> access &mdash; tap <b>Allow</b> so people can see and hear you.</div>
+  <div class="tip">Tip: add this to your Home Screen for one-tap access.</div>
+<script src="app.js"></script>
+</body>
+</html>
